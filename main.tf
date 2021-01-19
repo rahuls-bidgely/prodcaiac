@@ -27,12 +27,12 @@ resource "aws_launch_template" "devtoolslaunchtemplate" {
   network_interfaces {
     associate_public_ip_address = false
     subnet_id                   = "subnet-0b203fd84612bcbd1"
+    security_groups             = ["sg-0a3db65a3dad9644f"]
   }
 
   placement {
     availability_zone = "ca-central-1a"
   }
-
 
   tag_specifications {
     resource_type = "instance"
@@ -42,7 +42,7 @@ resource "aws_launch_template" "devtoolslaunchtemplate" {
     }
   }
 }
-resource "aws_autoscaling_group" "bar" {
+resource "aws_autoscaling_group" "devtools-od-asg-prodca" {
   availability_zones = ["ca-central-1a"]
   desired_capacity   = 1
   max_size           = 1
@@ -76,6 +76,8 @@ resource "aws_launch_template" "ingesterjobslaunchtemplate" {
   network_interfaces {
     associate_public_ip_address = false
     subnet_id                   = "subnet-0b203fd84612bcbd1"
+    security_groups             = ["sg-0a3db65a3dad9644f"]
+
   }
 
   placement {
@@ -91,7 +93,7 @@ resource "aws_launch_template" "ingesterjobslaunchtemplate" {
     }
   }
 }
-resource "aws_autoscaling_group" "ingesterjobs" {
+resource "aws_autoscaling_group" "ingesterjobs-od-asg-prodca" {
   availability_zones = ["ca-central-1a"]
   desired_capacity   = 1
   max_size           = 1
@@ -125,6 +127,8 @@ resource "aws_launch_template" "aggregationslaunchtemplate" {
   network_interfaces {
     associate_public_ip_address = false
     subnet_id                   = "subnet-0b203fd84612bcbd1"
+    security_groups             = ["sg-0a3db65a3dad9644f"]
+
   }
 
   placement {
@@ -140,7 +144,7 @@ resource "aws_launch_template" "aggregationslaunchtemplate" {
     }
   }
 }
-resource "aws_autoscaling_group" "aggregations" {
+resource "aws_autoscaling_group" "aggregations-od-asg-prodca" {
   availability_zones = ["ca-central-1a"]
   desired_capacity   = 1
   max_size           = 1
@@ -174,6 +178,8 @@ resource "aws_launch_template" "daemons1launchtemplate" {
   network_interfaces {
     associate_public_ip_address = false
     subnet_id                   = "subnet-0b203fd84612bcbd1"
+    security_groups             = ["sg-0a3db65a3dad9644f"]
+
   }
 
   placement {
@@ -189,7 +195,7 @@ resource "aws_launch_template" "daemons1launchtemplate" {
     }
   }
 }
-resource "aws_autoscaling_group" "daemons1" {
+resource "aws_autoscaling_group" "daemons1-od-asg-prodca" {
   availability_zones = ["ca-central-1a"]
   desired_capacity   = 1
   max_size           = 1
@@ -223,6 +229,8 @@ resource "aws_launch_template" "daemons2launchtemplate" {
   network_interfaces {
     associate_public_ip_address = false
     subnet_id                   = "subnet-0b203fd84612bcbd1"
+    security_groups             = ["sg-0a3db65a3dad9644f"]
+
   }
 
   placement {
@@ -238,7 +246,7 @@ resource "aws_launch_template" "daemons2launchtemplate" {
     }
   }
 }
-resource "aws_autoscaling_group" "daemons2" {
+resource "aws_autoscaling_group" "daemons2-od-asg-prodca" {
   availability_zones = ["ca-central-1a"]
   desired_capacity   = 1
   max_size           = 1
@@ -272,6 +280,8 @@ resource "aws_launch_template" "daemons3launchtemplate" {
   network_interfaces {
     associate_public_ip_address = false
     subnet_id                   = "subnet-0b203fd84612bcbd1"
+    security_groups             = ["sg-0a3db65a3dad9644f"]
+
   }
 
   placement {
@@ -287,7 +297,7 @@ resource "aws_launch_template" "daemons3launchtemplate" {
     }
   }
 }
-resource "aws_autoscaling_group" "daemons3" {
+resource "aws_autoscaling_group" "daemons3-od-asg-prodca" {
   availability_zones = ["ca-central-1a"]
   desired_capacity   = 1
   max_size           = 1
@@ -321,6 +331,8 @@ resource "aws_launch_template" "daemons4launchtemplate" {
   network_interfaces {
     associate_public_ip_address = false
     subnet_id                   = "subnet-0b203fd84612bcbd1"
+    security_groups             = ["sg-0a3db65a3dad9644f"]
+
   }
 
   placement {
@@ -336,7 +348,7 @@ resource "aws_launch_template" "daemons4launchtemplate" {
     }
   }
 }
-resource "aws_autoscaling_group" "daemons4" {
+resource "aws_autoscaling_group" "daemons4-od-asg-prodca" {
   availability_zones = ["ca-central-1a"]
   desired_capacity   = 1
   max_size           = 1
@@ -370,6 +382,8 @@ resource "aws_launch_template" "ingesterclientlaunchtemplate" {
   network_interfaces {
     associate_public_ip_address = false
     subnet_id                   = "subnet-0b203fd84612bcbd1"
+    security_groups             = ["sg-0a3db65a3dad9644f"]
+
   }
 
   placement {
@@ -385,7 +399,7 @@ resource "aws_launch_template" "ingesterclientlaunchtemplate" {
     }
   }
 }
-resource "aws_autoscaling_group" "ingesterclient" {
+resource "aws_autoscaling_group" "ingesterclient-od-asg-prodca" {
   availability_zones = ["ca-central-1a"]
   desired_capacity   = 1
   max_size           = 1
@@ -419,6 +433,8 @@ resource "aws_launch_template" "pyamidisagglaunchtemplate" {
   network_interfaces {
     associate_public_ip_address = false
     subnet_id                   = "subnet-0b203fd84612bcbd1"
+    security_groups             = ["sg-0a3db65a3dad9644f"]
+
   }
 
   placement {
@@ -434,7 +450,7 @@ resource "aws_launch_template" "pyamidisagglaunchtemplate" {
     }
   }
 }
-resource "aws_autoscaling_group" "pyamidisagg" {
+resource "aws_autoscaling_group" "pyamidisagg-od-asg-prodca" {
   availability_zones = ["ca-central-1a"]
   desired_capacity   = 1
   max_size           = 1
@@ -468,6 +484,8 @@ resource "aws_launch_template" "pyamidisaggprioritylaunchtemplate" {
   network_interfaces {
     associate_public_ip_address = false
     subnet_id                   = "subnet-0b203fd84612bcbd1"
+    security_groups             = ["sg-0a3db65a3dad9644f"]
+
   }
 
   placement {
@@ -483,7 +501,7 @@ resource "aws_launch_template" "pyamidisaggprioritylaunchtemplate" {
     }
   }
 }
-resource "aws_autoscaling_group" "pyamidisaggpriority" {
+resource "aws_autoscaling_group" "pyamidisaggpriority-od-asg-prodca" {
   availability_zones = ["ca-central-1a"]
   desired_capacity   = 1
   max_size           = 1
